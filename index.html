@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uma carta para você ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;overflow-x:hidden;font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 20% 20%,rgba(255,80,100,.25),transparent 25%),radial-gradient(circle at 80% 80%,rgba(255,0,70,.18),transparent 25%),linear-gradient(135deg,#120006,#3b0714,#160006);color:white}
+.stars{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.star{position:absolute;width:4px;height:4px;background:white;border-radius:50%;box-shadow:0 0 12px white;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.15;transform:scale(.6)}to{opacity:1;transform:scale(1.4)}}
+.falling-heart{position:fixed;top:-40px;z-index:2;pointer-events:none;animation:fall linear forwards;filter:drop-shadow(0 0 8px rgba(255,30,70,.8))}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg) scale(.7);opacity:0}10%{opacity:1}100%{transform:translateY(110vh) rotate(360deg) scale(1.3);opacity:0}}
+.container{position:relative;z-index:5;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:35px 15px}
+.letter{position:relative;width:min(720px,94vw);padding:45px 35px;border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(255,231,236,.96));color:#5b0a1b;box-shadow:0 0 20px rgba(255,60,90,.5),0 0 70px rgba(255,0,60,.25),inset 0 0 30px rgba(255,150,170,.3);border:2px solid rgba(255,255,255,.7);animation:appear 1.8s ease}
+@keyframes appear{from{opacity:0;transform:translateY(40px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+.letter:before{content:"";position:absolute;inset:12px;border:1px solid rgba(130,10,35,.25);border-radius:18px;pointer-events:none}
+.big-heart{width:75px;height:75px;margin:0 auto 25px;position:relative;transform:rotate(-45deg);background:linear-gradient(145deg,#ff304f,#a50020);box-shadow:inset -10px -10px 20px rgba(80,0,10,.35),inset 8px 8px 15px rgba(255,150,160,.5),0 10px 25px rgba(150,0,30,.35);animation:heartBeat 1.4s infinite}
+.big-heart:before,.big-heart:after{content:"";position:absolute;width:75px;height:75px;background:inherit;border-radius:50%}
+.big-heart:before{top:-37px;left:0}.big-heart:after{left:37px;top:0}
+@keyframes heartBeat{0%,100%{transform:rotate(-45deg) scale(1)}50%{transform:rotate(-45deg) scale(1.12)}}
+h1{text-align:center;font-size:clamp(30px,7vw,52px);color:#8d0b28;margin-bottom:8px;letter-spacing:1px}
+.subtitle{text-align:center;color:#a13b55;font-style:italic;margin-bottom:35px}
+.text{font-size:18px;line-height:1.9;text-align:left}.text p{margin-bottom:20px}.highlight{color:#c20e35;font-weight:bold}
+.divider{display:flex;align-items:center;gap:12px;margin:25px 0;color:#d11a42}.divider:before,.divider:after{content:"";height:1px;flex:1;background:linear-gradient(to right,transparent,#d11a42,transparent)}
+.signature{margin-top:30px;text-align:right;font-size:22px;font-style:italic;color:#8d0b28}
+.arrow{position:fixed;z-index:3;font-size:50px;pointer-events:none;opacity:.85;filter:drop-shadow(0 0 8px #ff1744);animation:shoot 7s linear infinite}
+.arrow.one{top:18%;left:-100px;transform:rotate(20deg)}.arrow.two{top:75%;right:-120px;transform:rotate(200deg);animation-delay:3s}
+@keyframes shoot{0%{transform:translateX(0) rotate(20deg);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translateX(120vw) rotate(20deg);opacity:0}}
+.love-button{display:block;margin:30px auto 0;border:none;border-radius:999px;padding:15px 28px;background:linear-gradient(135deg,#ff1744,#9b0025);color:white;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 8px 20px rgba(160,0,30,.3);transition:.3s}.love-button:hover{transform:translateY(-3px) scale(1.04)}
+.secret{display:none;margin-top:25px;text-align:center;font-size:19px;color:#a10c2c;font-weight:bold}.secret.show{display:block;animation:appear 1s ease}
+@media(max-width:600px){.letter{padding:38px 23px}.text{font-size:16px;line-height:1.8}.big-heart,.big-heart:before,.big-heart:after{width:60px;height:60px}.big-heart:before{top:-30px}.big-heart:after{left:30px}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="arrow one">🏹❤️</div><div class="arrow two">🏹❤️</div>
+<div class="container"><article class="letter">
+<div class="big-heart"></div>
+<h1>Para você, meu amor ❤️</h1>
+<div class="subtitle">De um cantinho do mundo para outro.</div>
+<div class="text">
+<p>Eu queria conseguir colocar em palavras tudo aquilo que sinto por você, mas às vezes parece que nenhuma frase é suficiente. Mesmo com a distância entre nós, você conseguiu se tornar uma das partes mais bonitas dos meus dias.</p>
+<p>Eu amo ouvir você falando das coisas que gosta. Amo quando você começa a falar dos seus <span class="highlight">animaizinhos</span> e principalmente quando o assunto é tubarão. É tão bonitinho ver você falando animado sobre algo que gosta. Eu poderia ficar ouvindo você falar por horas.</p>
+<p>Também amo o seu jeitinho maluquinho. O jeito que você consegue esquecer datas, se perder com o Google Maps e provavelmente transformar até uma situação simples em alguma história engraçada. E, sinceramente? Eu não mudaria isso em você.</p>
+<p>Amo também quando você não perde uma oportunidade sequer de flertar comigo. Você consegue aparecer com aquele jeitinho de sempre e fazer meu coração ficar todo bobo novamente.</p>
+<p>E preciso falar dos seus <span class="highlight">cabelinhos dourados</span>. Tem alguma coisa neles que eu simplesmente acho linda. Assim como acho lindo o seu jeito, suas manias, suas brincadeiras e todas aquelas pequenas coisas que fazem você ser exatamente você.</p>
+<div class="divider">❤️ ❤️ ❤️</div>
+<p>Eu sou apaixonado por você. Pela pessoa que você é, pelas coisas que você gosta, pelo seu jeito de falar, pelo seu jeitinho meio perdido, pelas suas brincadeiras e até pelas suas pequenas distrações.</p>
+<p>A distância pode colocar quilômetros entre a gente, mas ela não consegue diminuir o carinho que sinto por você. Cada conversa, cada brincadeira e cada momento nosso faz você parecer um pouquinho mais perto.</p>
+<p>Se eu pudesse guardar alguma coisa em um lugar especial, seriam todos os momentos que fizeram eu gostar ainda mais de você. Porque, no fim, são essas pequenas coisas que me fazem pensar: <span class="highlight">"eu realmente amo esse garoto."</span></p>
+<p>Obrigado por ser você. Por existir do jeitinho que existe. E por fazer parte dos meus dias mesmo estando tão longe.</p>
+</div>
+<div class="signature">Com todo o meu amor,<br>eu ❤️ você.</div>
+<button class="love-button" onclick="showSecret()">💌 Tem uma coisinha escondida aqui...</button>
+<div class="secret" id="secret">Eu escolheria você de novo. E de novo. E de novo. ❤️</div>
+</article></div>
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<80;i++){const star=document.createElement("div");star.className="star";star.style.left=Math.random()*100+"%";star.style.top=Math.random()*100+"%";star.style.animationDelay=Math.random()*3+"s";star.style.animationDuration=1+Math.random()*3+"s";stars.appendChild(star)}
+const hearts=["❤️","💖","💕","💗","💘","💝","♥️"];
+function createHeart(){const heart=document.createElement("div");heart.className="falling-heart";heart.innerText=hearts[Math.floor(Math.random()*hearts.length)];heart.style.left=Math.random()*100+"vw";heart.style.fontSize=14+Math.random()*28+"px";heart.style.animationDuration=5+Math.random()*7+"s";document.body.appendChild(heart);setTimeout(()=>heart.remove(),13000)}
+setInterval(createHeart,450);
+function showSecret(){const secret=document.getElementById("secret");secret.classList.add("show");for(let i=0;i<20;i++)setTimeout(createHeart,i*80)}
+</script>
+</body>
+</html>
